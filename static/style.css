@@ -11,11 +11,20 @@ body {
 }
 
 .login-container {
-    width: 350px;
+    width: 450px;
     height: 400px;
     background: #fcfcfc;
     border-radius: .5rem;
 }
+.register-container {
+    width: 450px;
+    height: auto;
+    padding: 2%;
+    background: #fcfcfc;
+    border-radius: .5rem;
+}
+
+
 
 form {
     
@@ -33,7 +42,18 @@ form {
 }
 
 input {
-    width: 250px;
+    width: 350px;
+    height: 40px;
+    background: #ffffff;
+    border: .1vw solid #bbb8b8;
+    border-radius: .5rem;
+    border: 1 none;
+    outline: 0;
+    text-align: start;
+    
+}
+select {
+    width: 350px;
     height: 40px;
     background: #ffffff;
     border: .1vw solid #bbb8b8;
@@ -44,6 +64,9 @@ input {
     
 }
 
+p {
+    color: rgb(255, 255, 255);
+}
 
 label {
     text-align: left;

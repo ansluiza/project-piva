@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='botao.css') }}">
+</head>
+<body>
+    <div class="register-container">
+        <form action="/login_handler" class="form-container" method="POST">
+            
+            <div class="form-input">
+                <label for="name">Name</label>
+                <input name="name-input" id="name" type="text"/>
+            </div>
+            <div class="form-input">
+                <label for="age">Age</label>
+            <input name="number-input" id="age" type="number"/>
+              </div>
+              <div class="form-input">
+                <label for="height">Height</label>
+            <input name="height-input" id="height" type="number"/>
+              </div>
+              <div class="form-input">
+                <label for="weight">Weight</label>
+            <input name="weight" id="weight" type="number"/>
+              </div>
+
+              <div class="form-input">
+                <label for="gender">Choose a Gender:</label>
+                <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                
+                  </select>
+              </div>
+
+              <div class="form-input">
+                <label for="sport">Choose a Sport:</label>
+                <select name="sport" id="sport">
+                    <option value="basketball">Basketball</option>
+                    <option value="soccer">Soccer</option>
+                    <option value="voleyball">Volleyball</option>
+                    <option value="tennis">Tennis</option>                    
+                  </select>
+              </div>
+
+             <div class="form-input">
+                <label for="sport">Have you ever praticed this sport before?</label>
+                <select name="sport" id="sport">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+             </div>
+
+            <button type="submit" class="submit-button">
+                <a class="animated-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Login
+                  </a>
+            </button>
+            
+        </form>
+        {% with messages = get_flashed_messages() %}    
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %}
+        {% endwith %}
+    </div>
+</body>
+</html>

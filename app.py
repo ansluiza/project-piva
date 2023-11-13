@@ -28,9 +28,12 @@ def login_handle(): # ela vai cuidar da verificação de login
     else:
         # false = user not found / senha incorreta
         print("user not found / senha incorreta")
-        flash("E-mail ou senha incorretos!", "info")
+        flash("Username ou senha incorretos!", "info")
         return redirect(url_for('login'))
     
+@app.route('/register')
+def register(): # com uma função para renderizar a página
+    return render_template('register.html')
     
     
 

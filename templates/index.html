@@ -19,20 +19,25 @@
                 <label for="password-input">Password</label>
             <input name="password-input" id="password-input" type="password" placeholder=" Password"/>
             </div>
+
             <button type="submit" class="submit-button">
-                <a href="#" class="animated-button">
+                <a class="animated-button">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
-                    Button
+                    Login
                   </a>
             </button>
             
+            <div>
+                <a href="/register">Create an account</a>
+            </div>
+
         </form>
         {% with messages = get_flashed_messages() %}    
         {% for message in messages %}
-        <p>{message}</p>
+        <p>{{message}}</p>
         {% endfor %}
         {% endwith %}
     </div>
