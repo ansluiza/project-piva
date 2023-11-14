@@ -9,23 +9,29 @@
 </head>
 <body>
     <div class="register-container">
-        <form action="/login_handler" class="form-container" method="POST">
+        <form action="/register_handler" class="form-container" method="POST">
             
             <div class="form-input">
                 <label for="name">Name</label>
                 <input name="name-input" id="name" type="text"/>
             </div>
+ 
+            <div class="form-input">
+                <label for="e-mail">E-mail</label>
+                <input name="e-mail-input" id="e-mail" type="email"/>
+            </div>
+
             <div class="form-input">
                 <label for="age">Age</label>
             <input name="number-input" id="age" type="number"/>
               </div>
               <div class="form-input">
-                <label for="height">Height</label>
-            <input name="height-input" id="height" type="number"/>
+                <label for="number">Height</label>
+            <input name="height-input" id="height" type="text"/>
               </div>
               <div class="form-input">
-                <label for="weight">Weight</label>
-            <input name="weight" id="weight" type="number"/>
+                <label for="number">Weight</label>
+            <input name="weight-input" id="weight" type="number"/>
               </div>
 
               <div class="form-input">
@@ -39,8 +45,8 @@
               </div>
 
               <div class="form-input">
-                <label for="sport">Choose a Sport:</label>
-                <select name="sport" id="sport">
+                <label for="sport-option">Choose a Sport:</label>
+                <select name="sport-option" id="sport-option">
                     <option value="basketball">Basketball</option>
                     <option value="soccer">Soccer</option>
                     <option value="voleyball">Volleyball</option>
@@ -49,7 +55,7 @@
               </div>
 
              <div class="form-input">
-                <label for="sport">Have you ever praticed this sport before?</label>
+                <label for="sport">Has the student ever played this sport?</label>
                 <select name="sport" id="sport">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
