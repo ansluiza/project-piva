@@ -23,8 +23,51 @@ body {
     background: #fcfcfc;
     border-radius: .5rem;
 }
+.data-container {
+    width: auto;
+    height: auto;
+    padding: 2%;
+    background: #fcfcfc;
+    border-radius: .5rem;
+    text-align: center;
+    
+}
+
+.data-container h1{
+    font-weight: 100;
+}
 
 
+table {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    columns: center;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    overflow-y: auto;
+    border: unset !important;
+    
+}
+
+table, tbody, th, tr, td {
+    border: unset;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    /* border-bottom: 1px solid #000; */
+}
+
+table tr th{
+    font-weight: 100;
+}
+
+.edit-container {
+    width: 500px;
+    height: auto;
+    background: #fcfcfc;
+    border-radius: .5rem;
+}
 
 form {
     

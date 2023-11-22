@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='botao.css') }}">
+</head>
+<body>
+    
+    <div class="data-container">
+        <h1>Dados da Tabela</h1>
+
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Sport-option</th>
+                <th>Sport</th>
+                <th>Gender</th>
+                <th>Action</th>
+            </tr>
+            {% for linha in dados %}
+            <tr>
+                <td>{{ linha[1] }}</td>
+                <td>{{ linha[2] }}</td>
+                <td>{{ linha[3] }}</td>
+                <td>{{ linha[4] }}</td>
+                <td>{{ linha[5] }}</td>
+                <td>{{ linha[6] }}</td>
+                <td>{{ linha[7] }}</td>
+                <td>{{ linha[8] }}</td>
+                <td>
+                    {{ linha[9] }} 
+                    <a href="/data/deleteStudent?student={{ linha[0] }}"><button>Delete</button></a> 
+                    <a href="/data/editStudent?student={{ linha[0] }}"><button>Edit</button></a> 
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <button type="button"  class="submit-button">
+            <a href="/register" class="animated-button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Create
+              </a>
+        </button>
+
+
+    </body>
+    </html>
+    </div>
+</body>
